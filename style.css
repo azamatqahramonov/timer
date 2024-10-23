@@ -1,0 +1,106 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  background-color: #f0f4ff;
+  font-family: "Arial", sans-serif;
+}
+
+.timer-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+}
+
+circle {
+  fill: none;
+  stroke-width: 10;
+  stroke: #d3e1ff;
+}
+
+#progress {
+  stroke: #1976d2;
+  stroke-linecap: round;
+  stroke-dasharray: 565.48;
+  stroke-dashoffset: 0;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  transition: stroke-dashoffset 1s linear;
+}
+
+.timer {
+  font-size: 32px;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+input[type="number"] {
+  width: 25%;
+  padding: 10px 15px;
+  font-size: 18px;
+  border: 2px solid #d3e1ff;
+  border-radius: 50px;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background: #fff;
+}
+
+input[type="number"]:focus {
+  border-color: #1976d2;
+  box-shadow: 0 5px 15px rgba(25, 118, 210, 0.3);
+  background: #f0f4ff;
+}
+
+input[type="number"]::placeholder {
+  color: #a9a9a9;
+}
+
+.wrapper {
+  display: flex;
+  gap: 15px;
+}
+
+button {
+  background: linear-gradient(45deg, #1976d2, #00bfff);
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-size: 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  box-shadow: 0 5px 15px rgba(25, 118, 210, 0.3);
+  margin-top: 15px;
+}
+
+button:hover {
+  background: linear-gradient(45deg, #00bfff, #1976d2);
+  box-shadow: 0 8px 20px rgba(25, 118, 210, 0.5);
+}
+
+@media (max-width: 600px) {
+  input[type="number"] {
+    width: 50%;
+  }
+}
+
+@media (max-width: 900px) {
+  input[type="number"] {
+    width: 50%;
+  }
+}
